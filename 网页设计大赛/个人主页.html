@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="all.css" >
+<title>音乐播放器</title>
+
+</head>
+<body>
+<div class="i">
+    <div class="i1">
+        <div class="i11">
+            <img src="photos/头像猫.jpg">
+            <div class="i111">
+                <p>名称：</p>
+                <p id="mingcheng">你还没有登录</p>
+            </div>
+            <div class="i111">
+                <p>账号：</p>
+                <p id="zhanghao">你还没有登录</p>
+            </div>
+            <div class="i111">
+                <p>爱好：</p>
+                <p id="aihao">无</p>
+            </div>
+            <div class="i111">
+                <p>会员：</p>
+                <p id="huiyuan">无</p>
+            </div>
+            <img src="photos/收音机猫.jpg">
+            
+        </div>
+    </div>
+    <div class="i2"> 
+        <div class="i3">
+            <div class="i4">
+                <p>我的歌单</p>
+                <div></div>
+            </div>
+            <div class="i4">
+                <p>我的收藏</p>
+                <div></div>
+            </div>
+            <div class="i4">
+                <p>我的关注</p>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+var yonghu=0
+var url=location.search;
+var params=url.substr(1);
+var pa=params.split("&")
+var s=new Object();
+if(yonghu==0){
+    for(var i=0;i<pa.length;i++){
+        s[pa[i].split("=")[0]]=unescape(pa[i].split("=")[1]);
+    }
+    document.getElementById("mingcheng").innerText=s.mingcheng;
+    document.getElementById("zhanghao").innerText=s.zhanghao;
+    yonghu=1;
+}
+</script>
+</body>
+</html>

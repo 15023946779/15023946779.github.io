@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="all.css" >
+<title>音乐播放器</title>
+</head>
+<body style="position: relative;">
+
+<div class="g">
+	<span class="g1">
+		<p>歌单</p>
+	</span>
+	<div>
+		<img src="photos/10.jpg" onclick="d55(this.id)" id="0">
+		<img src="photos/11.jpg" onclick="d55(this.id)" id="1">
+		<img src="photos/13.jpg" onclick="d55(this.id)" id="2">
+		<img src="photos/12.jpg" onclick="d55(this.id)" id="3">
+	</div>
+	<span class="g2">
+		<p class="d18">1.相遇</p>
+		<p class="d19">2.城市</p>
+		<P class="d18">3.黑暗</P>
+		<p class="d19">4.反正我信了</p>
+	</span>
+	<div>
+		<img src="photos/9.jpg" onclick="d55(this.id)" id="4">
+		<img src="photos/5.jfif" onclick="d55(this.id)" id="5">
+		<img src="photos/6.jfif" onclick="d55(this.id)" id="6">
+		<img src="photos/7.jfif" onclick="d55(this.id)" id="7">
+	</div>
+	<span class="g2">
+		<p class="d18">5.平凡之路</p>
+                <p class="d19">6.发如雪</p>
+                <p class="d18">7.反方向的钟</p>
+                <p class="d19">8.给我一首歌的时间</p>
+	</span>
+	<div>
+		<img src="photos/8.webp" onclick="d55(this.id)" id="8">
+		<img src="photos/9.jfif" onclick="d55(this.id)" id="9">
+		<img src="photos/10.jfif" onclick="d55(this.id)" id="10">
+		<img src="photos/11.webp" onclick="d55(this.id)" id="11">
+	</div>
+	<span class="g2">
+		<p class="d18">9.花海</p>
+                <p class="d19">10.霍元甲</p>
+                <P class="d18">11.简单爱</P>
+                <p class="d19">12.兰亭序</p>
+	</span>
+	<div>
+		<img src="photos/12.webp" onclick="d55(this.id)" id="12">
+		<img src="photos/13.jfif" onclick="d55(this.id)" id="13">
+		<img src="photos/14.webp" onclick="d55(this.id)" id="14">
+		<img src="photos/15.webp" onclick="d55(this.id)" id="15">
+	</div>
+	<span class="g2">
+		<p class="d18">13.明明就</p>
+                <p class="d19">14.蒲公英的约定</p>
+                <p class="d18">15.七里香</p>
+                <p class="d19">16.青花瓷</p>
+	</span>
+	<div>
+		<img src="photos/16.webp" onclick="d55(this.id)" id="16">
+		<img src="photos/17.jfif" onclick="d55(this.id)" id="17">
+		<img src="photos/18.jfif" onclick="d55(this.id)" id="18">
+		<img src="photos/19.jfif" onclick="d55(this.id)" id="19">
+	</div>
+	<span class="g2">
+		<p class="d18">17.晴天</p>
+                <p class="d19">18.听妈妈的话</p>
+                <P class="d18">19.烟花易冷</P>
+                <p class="d19">20.夜曲</p>
+	</span>
+	<div>
+		<img src="photos/20.jfif" onclick="d55(this.id)" id="20">
+		<img src="photos/21.jfif" onclick="d55(this.id)" id="21">
+		<img src="photos/22.webp" onclick="d55(this.id)" id="22">
+		<img src="photos/23.webp" onclick="d55(this.id)" id="23">
+	</div>
+	<span class="g2">
+		<p class="d18">21.一路向北</p>
+                <p class="d19">22.以父之名</p>
+                <p class="d18">23.告白</p>
+                <p class="d19">24.搁浅</p>
+	</span>
+</div>
+<div class="ee">
+    <button onclick="a1()">服务条款</button>
+    <button onclick="a1()">权限说明</button>
+    <button onclick="a1()">制作人：彭真，潘志豪，陈文勇</button>
+    <button onclick="a1()">免责声明</button>
+    <button onclick="a1()">2020级计科3班</button>
+</div>
+
+<script>
+var musics=[
+{src:"musics/0.mp3", value:0,img:"photos/10.jpg",name:"相遇",singer:"韩红"},
+{src:"musics/1.mp3",value:1,img:"photos/11.jpg",name:"城市",singer:"李四"},
+{src:"musics/2.mp3",value:2,img:"photos/13.jpg",name:"黑暗",singer:"张三"},
+{src:"musics/3.mp3",value:3,img:"photos/12.jpg",name:"反正我信了",singer:"王五"},
+{src:"musics/4.mp3",value:4,img:"photos/9.jpg",name:"平凡之路",singer:"朴树"},
+{src:"musics/5.mp3",value:5,img:"photos/5.jfif",name:"发如雪",singer:"周杰伦"},
+{src:"musics/6.mp3",value:6,img:"photos/6.jfif",name:"反方向的钟",singer:"周杰伦"},
+{src:"musics/7.mp3",value:7,img:"photos/7.jfif",name:"给我一首歌的时间",singer:"周杰伦"},
+{src:"musics/8.mp3",value:8,img:"photos/8.webp",name:"花海",singer:"周杰伦"},
+{src:"musics/9.mp3",value:9,img:"photos/9.jfif",name:"霍元甲",singer:"周杰伦"},
+{src:"musics/10.mp3",value:10,img:"photos/10.jfif",name:"简单爱",singer:"周杰伦"},
+{src:"musics/11.mp3",value:11,img:"photos/11.webp",name:"兰亭序",singer:"周杰伦"},
+{src:"musics/12.mp3",value:12,img:"photos/12.webp",name:"明明就",singer:"周杰伦"},
+{src:"musics/13.mp3",value:13,img:"photos/13.jfif",name:"蒲公英的约定",singer:"周杰伦"},
+{src:"musics/14.mp3",value:14,img:"photos/14.webp",name:"七里香",singer:"周杰伦"},
+{src:"musics/15.mp3",value:15,img:"photos/15.webp",name:"青花瓷",singer:"周杰伦"},
+{src:"musics/16.mp3", value:16,img:"photos/16.webp",name:"晴天",singer:"周杰伦"},
+{src:"musics/17.mp3",value:17,img:"photos/17.jfif",name:"听妈妈的话",singer:"周杰伦"},
+{src:"musics/18.mp3",value:18,img:"photos/18.jfif",name:"烟花易冷",singer:"周杰伦"},
+{src:"musics/19.mp3",value:19,img:"photos/19.jfif",name:"夜曲",singer:"周杰伦"},
+{src:"musics/20.mp3",value:20,img:"photos/20.jfif",name:"一路向北",singer:"周杰伦"},
+{src:"musics/21.mp3", value:21,img:"photos/21.jfif",name:"以父之名",singer:"周杰伦"},
+{src:"musics/22.mp3",value:22,img:"photos/22.webp",name:"告白气球",singer:"周杰伦"},
+{src:"musics/23.mp3",value:23,img:"photos/23.webp",name:"搁浅",singer:"周杰伦"},
+
+]
+
+function d55(h){
+    var name=h;
+    var url="p3.html?"+"name="+name;
+    top.last.location.href=url;
+}
+</script>
+</body>
+</html>

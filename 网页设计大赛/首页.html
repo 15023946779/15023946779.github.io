@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="all.css" >
+	<title>音乐播放器</title>
+</head>
+<body>
+
+<div class="lunbo">
+    <div class="lunbo3">
+        <img src="photos/4.jpg" id="lunbo">
+    </div>
+    <div class="lunbo1">
+        <img src="photos/后一个.png" onclick="hou()">
+    </div>
+    <div class="lunbo2">
+        <img src="photos/前一个.png" onclick="qian()">
+    </div>
+</div>
+
+<div class="c1">
+</div>
+<div class="d">
+	<div class="dd">
+        <div class="d1">
+            <a href="歌单.html"><img class="d2" onclick="b()" src="photos/歌单.png" /></a>
+            <a href="排行榜.html"><img class="d2" onclick="c()" src="photos/排行榜.png" /></a>
+            <a href="个人主页.html"><img class="d2" onclick="d()" src="photos/个人主页.png" /></a>
+            <img class="d2" onclick="a1()" src="photos/购买会员.png" /></a>
+            <img class="d2" onclick="show()" src="photos/喜欢.png" /></a>
+        </div>
+        <div class="d3">
+            <text>歌单</text>
+            <text> 排行榜</text>
+            <text>个人主页</text>
+            <text>购买会员</text>
+            <text>登录</text>
+        </div>
+        <div class="d4">
+            <img src="photos/推荐.png">
+            <text>热门音乐</text>	
+        </div>
+        <div class="dd5" id="hhp">
+            <div class="d5">
+                <img src="photos/10.jpg" onclick="boff(this.id)" id="0"/>
+            </div>
+            <div class="d6">
+                <img src="photos/11.jpg" onclick="boff(this.id)" id="1"/>
+                <img src="photos/13.jpg" onclick="boff(this.id)" id="2"/>
+            </div>
+            <div class="d6">
+                <img src="photos/12.jpg" onclick="boff(this.id)" id="3"/>
+                <img src="photos/9.jpg" onclick="boff(this.id)" id="4"/>
+            </div>
+        </div>
+        <div class="d4">
+            <img src="photos/推荐.png">
+            <text>热门电台</text>	
+        </div>
+        <div class="d7">
+            <div>
+                <img src="photos/新.png" />
+                <img src="photos/潮.png" />
+                <img src="photos/嘻.png" />
+                <img src="photos/经.png" />
+            </div>
+        </div>
+        <div class="d8">
+            <text>新歌</text>
+            <text>潮歌</text>
+            <text>嘻哈</text>
+            <text>经典</text>
+        </div>
+        <div class="d4">
+            <img src="photos/推荐.png">
+            <text>热门歌手</text>	
+        </div>
+        <div class="dd6">
+            <div class="d9">
+                <img src="photos/14.jpg" />
+                <p class="dp1">林俊杰</p>
+            </div>
+            <div class="d10">
+                <img src="photos/15.jpg" />	
+                <img src="photos/16.jpg" />
+            </div>
+            <p class="dp2">毛不易</p>
+            <p class="dp3">张杰</p>
+            <div class="d11">
+                <img src="photos/17.jpg" />
+                <p class="dp4">周杰伦</p>
+                <img src="photos/18.jpg" />
+            </div>
+            <p class="dp5">王俊凯</p>
+            <div class="d12">
+                <img src="photos/19.jpg" />
+                <p class="dp6">邓紫棋</p>
+            </div>
+        </div>
+	</div>
+    <div class="dd2">
+        <div class="d4">
+            <img src="photos/推荐.png">
+            <text>热门榜单</text>	
+        </div>
+        <div class="dk1">
+            <img class="d13" src="photos/飙升榜标题.png" />
+            <p class="d14">真志飙升榜</p>
+            <img class="d15" src="photos/播放.png" id="0" onclick="boff(this.id)"/>
+            <img class="d16" src="photos/收藏2.png" />
+            <div class="d17">
+                <p class="d18" id="0" onclick="boff(this.id)">1.相遇</p>
+                <p class="d19" id="1" onclick="boff(this.id)">2.城市</p>
+                <P class="d18" id="2" onclick="boff(this.id)">3.黑暗</P>
+                <p class="d19" id="3" onclick="boff(this.id)">4.反正我信了</p>
+                <p class="d18" id="4" onclick="boff(this.id)">5.平凡之路</p>
+                <p class="d19" id="5" onclick="boff(this.id)">6.发如雪</p>
+                <p class="d18" id="6" onclick="boff(this.id)">7.反方向的钟</p>
+                <p class="d19" id="7" onclick="boff(this.id)">8.给我一首歌的时间</p>
+                
+            </div>
+        </div>
+        <div class="dk1">
+            <img class="d13" src="photos/新歌榜标题.png" />
+            <p class="d14">真志新歌榜</p>
+            <img class="d15" src="photos/播放.png" id="8" onclick="boff(this.id)"/>
+            <img class="d16" src="photos/收藏2.png" />
+            <div class="d17">
+                <p class="d18" id="8" onclick="boff(this.id)">1.花海</p>
+                <p class="d19" id="9" onclick="boff(this.id)">2.霍元甲</p>
+                <P class="d18" id="10" onclick="boff(this.id)">3.简单爱</P>
+                <p class="d19" id="11" onclick="boff(this.id)">4.兰亭序</p>
+                <p class="d18" id="12" onclick="boff(this.id)">5.明明就</p>
+                <p class="d19" id="13" onclick="boff(this.id)">6.蒲公英的约定</p>
+                <p class="d18" id="14" onclick="boff(this.id)">7.七里香</p>
+                <p class="d19" id="15" onclick="boff(this.id)">8.青花瓷</p>
+            </div>
+        </div>
+        <div class="dk1">
+            <img class="d13" src="photos/原创榜标题.png" />
+            <p class="d14">真志原创榜</p>
+            <img class="d15" src="photos/播放.png" id="16" onclick="boff(this.id)"/>
+            <img class="d16" src="photos/收藏2.png" />
+            <div class="d17">
+                <p class="d18" id="16" onclick="boff(this.id)">1.晴天</p>
+                <p class="d19" id="17" onclick="boff(this.id)">2.听妈妈的话</p>
+                <P class="d18" id="18" onclick="boff(this.id)">3.烟花易冷</P>
+                <p class="d19" id="19" onclick="boff(this.id)">4.夜曲</p>
+                <p class="d18" id="20" onclick="boff(this.id)">5.一路向北</p>
+                <p class="d19" id="21" onclick="boff(this.id)">6.以父之名</p>
+                <p class="d18" id="22" onclick="boff(this.id)">7.告白</p>
+                <p class="d19" id="23" onclick="boff(this.id)">8.搁浅</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div id="s" class="cc1 hcc"></div>
+    <div id="m" class="cc2 hcc">
+        <p>账号：<input type="text" id="zhanghao" value=""></p>
+        <p>密码：<input type="password" id="mima" value=""/></p>
+        <p>名称：<input type="text" id="mingcheng" value=""/></p>
+        <p>
+            <input type="button" value="确定" onclick="hide_panduan()">
+            <input type="button" value="取消" onclick="hide()"> 
+        </p>
+    </div>
+</div>
+
+<div class="e">
+    <button onclick="a1()">服务条款</button>
+    <button onclick="a1()">权限说明</button>
+    <button onclick="a1()">制作人：彭真，潘志豪，陈文勇</button>
+    <button onclick="a1()">免责声明</button>
+    <button onclick="a1()">2020级计科3班</button>
+</div>
+<script>
+var lunbotu=['photos/4.jpg','photos/5.png','photos/6.jpg','photos/7.png','photos/8.jpg']
+var lun=0;
+var lunbo=document.getElementById("lunbo")
+function qian(){
+    if(this.lun==0){
+        this.lun=4;
+    }else{
+        this.lun--;
+    }
+    lunbo.src=lunbotu[this.lun]
+}
+setInterval( function hou(){
+    if(this.lun==4){
+        this.lun=0;
+    }else{
+        this.lun++;
+    }
+    opacity(lunbo,-0.1,0)
+    lunbo.src=lunbotu[this.lun]
+},5000)
+
+function hou(){
+    if(this.lun==4){
+        this.lun=0;
+    }else{
+        this.lun++;
+    }
+    opacity(lunbo,-0.1,0)
+    lunbo.src=lunbotu[this.lun]
+}
+
+function opacity(obj,dir,targ){
+    clearInterval(obj.timer);
+    obj.timer=setInterval(function(){
+        var speed=parseFloat(getStyle(obg,"opacity"))+dir;
+        if(speed<targ){
+            clearInterval(obj.timer);
+        }else{
+            obj.style.opacity=speed;
+        }
+    },300)
+}
+
+function getStyle(obj,attr){
+    return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+}
+
+function boff(h){
+    var name=h;
+    var url="p3.html?"+"name="+name;
+    top.last.location.href=url;
+}
+
+function a1(){
+    alert("尚未实现");
+}
+
+
+function b(){
+	top.nav.location.href="lankuang2.html"
+}
+function c(){
+	top.nav.location.href="lankuang3.html"
+}
+function d(){
+	top.nav.location.href="lankuang4.html"
+}
+
+function show(){
+    document.getElementById("s").classList.remove("hcc")
+    document.getElementById("m").classList.remove("hcc")
+}
+function hide(){
+    document.getElementById("s").classList.add("hcc")
+    document.getElementById("m").classList.add("hcc")
+}
+
+var zhanghao=document.getElementById("zhanghao")
+var mima=document.getElementById("mima")
+var mingcheng=document.getElementById("mingcheng")
+function hide_panduan(){
+    if(zhanghao.value==""){
+        alert("请输入账号")
+    }else if(mima.value==""){
+        alert("请输入密码")
+    }else if(mingcheng.value==""){
+        alert("请输入名称")
+    }
+    if(zhanghao.value!="" && mima.value!="" && mingcheng.value!=""){
+        alert("你好，"+mingcheng.value)
+        hide();
+        var url="个人主页.html?"+"zhanghao="+zhanghao.value+"&mingcheng="+mingcheng.value;
+        top.main.location.href=url;
+        top.nav.location.href="lankuang4.html"
+    }
+}
+
+</script>
+</body>
+</html>
+
+

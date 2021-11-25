@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="all.css" >
+<title>音乐播放器</title>
+</head>
+<body>
+    <audio src="musics/1.mp3" id="music"></audio>
+    <div class="f">
+        <div class="f1">
+            <img src="photos/上一首.png" onclick="ff4()" id="sys"/>
+            <img src="photos/播放.png" onclick="ff5()" id="bf">
+            <img src="photos/下一首.png" onclick="ff6()" id="xys"/>
+        </div>
+        <div class="f4">
+            <img src="photos/顺序播放.png" id="shunxu" onclick="bofangshunxu()">
+        </div>
+        <div class="f2">
+            <img src="photos/10.jpg" id="kuangtu">
+        </div>
+        <div class="f3">
+            <p id="geming">相遇</p>
+            <p id="singer">韩红</p>
+        </div>
+    </div>
+<script>
+    
+
+var number=false; //判断是否在播放音乐
+var num=null;
+var music=document.getElementById("music");
+var kuangtu=document.getElementById("kuangtu");
+var geming=document.getElementById("geming");
+var singer=document.getElementById("singer");
+var musics=[
+{src:"musics/0.mp3", value:0,img:"photos/10.jpg",name:"相遇",singer:"韩红"},
+{src:"musics/1.mp3",value:1,img:"photos/11.jpg",name:"城市",singer:"李四"},
+{src:"musics/2.mp3",value:2,img:"photos/13.jpg",name:"黑暗",singer:"张三"},
+{src:"musics/3.mp3",value:3,img:"photos/12.jpg",name:"反正我信了",singer:"王五"},
+{src:"musics/4.mp3",value:4,img:"photos/9.jpg",name:"平凡之路",singer:"朴树"},
+{src:"musics/5.mp3",value:5,img:"photos/5.jfif",name:"发如雪",singer:"周杰伦"},
+{src:"musics/6.mp3",value:6,img:"photos/6.jfif",name:"反方向的钟",singer:"周杰伦"},
+{src:"musics/7.mp3",value:7,img:"photos/7.jfif",name:"给我一首歌的时间",singer:"周杰伦"},
+{src:"musics/8.mp3",value:8,img:"photos/8.webp",name:"花海",singer:"周杰伦"},
+{src:"musics/9.mp3",value:9,img:"photos/9.jfif",name:"霍元甲",singer:"周杰伦"},
+{src:"musics/10.mp3",value:10,img:"photos/10.jfif",name:"简单爱",singer:"周杰伦"},
+{src:"musics/11.mp3",value:11,img:"photos/11.webp",name:"兰亭序",singer:"周杰伦"},
+{src:"musics/12.mp3",value:12,img:"photos/12.webp",name:"明明就",singer:"周杰伦"},
+{src:"musics/13.mp3",value:13,img:"photos/13.jfif",name:"蒲公英的约定",singer:"周杰伦"},
+{src:"musics/14.mp3",value:14,img:"photos/14.webp",name:"七里香",singer:"周杰伦"},
+{src:"musics/15.mp3",value:15,img:"photos/15.webp",name:"青花瓷",singer:"周杰伦"},
+{src:"musics/16.mp3", value:16,img:"photos/16.webp",name:"晴天",singer:"周杰伦"},
+{src:"musics/17.mp3",value:17,img:"photos/17.jfif",name:"听妈妈的话",singer:"周杰伦"},
+{src:"musics/18.mp3",value:18,img:"photos/18.jfif",name:"烟花易冷",singer:"周杰伦"},
+{src:"musics/19.mp3",value:19,img:"photos/19.jfif",name:"夜曲",singer:"周杰伦"},
+{src:"musics/20.mp3",value:20,img:"photos/20.jfif",name:"一路向北",singer:"周杰伦"},
+{src:"musics/21.mp3", value:21,img:"photos/21.jfif",name:"以父之名",singer:"周杰伦"},
+{src:"musics/22.mp3",value:22,img:"photos/22.webp",name:"告白气球",singer:"周杰伦"},
+{src:"musics/23.mp3",value:23,img:"photos/23.webp",name:"搁浅",singer:"周杰伦"},
+
+]
+
+
+
+var shunxu=0;
+music.addEventListener("ended",function(){
+        ff6()
+})
+
+var pop=document.getElementById("shunxu")
+function bofangshunxu(){
+    if(this.shunxu==2){
+        this.shunxu=0;
+    }else{
+        this.shunxu++;
+    }
+    if(this.shunxu==0){
+        pop.src="photos/顺序播放.png"
+    }
+    if(this.shunxu==1){
+        pop.src="photos/单曲循环.png"
+    }
+    if(this.shunxu==2){
+        pop.src="photos/随机播放.png"
+    }
+}
+
+function a1(){
+    alert("尚未实现");
+}
+
+function xinxi(h){
+    this.music.src=musics[h].src;
+    this.kuangtu.src=musics[h].img;
+    this.geming.innerText=musics[h].name;
+    this.singer.innerText=musics[h].singer;
+    if(h!=null){
+        music.play()
+        this.number=true;
+        panduannumber();
+    }
+}
+
+function xinxi2(h){
+    this.music.src=musics[h].src;
+    this.kuangtu.src=musics[h].img;
+    this.geming.innerText=musics[h].name;
+    this.singer.innerText=musics[h].singer;
+}
+
+function ppp(){
+    if(number==false){
+        number=true;
+        music.play();
+    }else{
+        number=false;
+        music.pause();
+    }
+}
+
+function panduannumber(){
+    if(number==true){
+        bf.src="photos/暂停.png";
+    }else{
+        bf.src="photos/播放.png";
+    }
+}
+
+
+function d55(bop){
+    if(this.num==0){
+        this.num=0;
+    }
+    if(this.num!=bop){
+        this.num=bop;
+        xinxi(this.num); 
+        music.play();
+        number=true;
+    }else {ppp();}
+    panduannumber();
+}
+var bf=document.getElementById("bf")
+var sys=document.getElementById("sys")
+var xys=document.getElementById("xys")
+function ff5(){
+    if(this.num==null){
+        this.num=0;
+    }
+    xinxi2(this.num)
+    if(this.number==true){
+        this.number=false;
+        music.pause()
+        bf.src="photos/播放.png";
+    }else{
+        this.number=true;
+        music.play()
+        bf.src="photos/暂停.png";
+    }
+}
+function ff4(){
+    if(this.num==-1){
+        this.num=0;
+    }
+    if(this.num==0){
+        this.num=musics.length-1;
+    }else{this.num--;}
+    xinxi(this.num);
+    music.play();
+    number=true;
+    panduannumber();
+}
+function ff6(){
+    if(this.num==-1){
+        this.num=0;
+    }
+    if(this.num==musics.length-1){
+        this.num=0;
+    }else{this.num++;}
+    xinxi(this.num);
+    music.play();
+    number=true;
+    panduannumber();
+}
+
+//获取其他网页的值
+var url=location.search;
+var params=url.substr(1);
+var s=new Object();
+s[params.split("=")[0]]=unescape(params.split("=")[1]);
+this.num=s.name;
+xinxi(this.num)
+
+
+</script>
+</body>
+</html>
